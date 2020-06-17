@@ -1,12 +1,10 @@
 const fs = require('fs');
-const { report } = require('process');
-
-//
-// make sure directory exists
-exports.onPreBootstrap = ({ reporter }) => {
-  const contentPath = 'data';
-  if (!fs.existsSync()) {
-    reporter.info(`create the ${content} directory `);
+// options is passed from args in gatsby-config wrapper function
+exports.onPreBootstrap = ({ reporter }, options) => {
+  // make sure directory exists
+  const contentPath = options.contentPath || 'data';
+  if (!fs.existsSync(contentPath)) {
+    reporter.info(`create the ${contentPath} directory `);
     fs.mkdirSync(contentPath);
   }
 };
@@ -31,9 +29,9 @@ exports.sourceNodes = ({ actions }) => {
 
 //
 // define resolvers for custom in event fields (slug)
-exports.createResolvers = ({ createResolvers }) => {
+exports.createResolvers = ({ createResolvers }, options) => {
   // site idx
-  const basePath = '/';
+  const basePath = options.basePath || '/';
   //
   const slugify = str => {
     //
@@ -61,8 +59,9 @@ exports.createResolvers = ({ createResolvers }) => {
 };
 //
 // query evts and create pages
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const basePath = '/';
+exports.createPages = async ({ actions, graphql, reporter }, options) => {
+  const basePath = options.basePath || '/';
+
   actions.createPage({
     path: basePath,
     component: require.resolve('./src/templates/events.js')
@@ -95,6 +94,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: slug,
       component: require.resolve('./src/templates/event.js'),
       context: {
+        // make available as query variable in page queries
         eventID: event.id
       }
     });

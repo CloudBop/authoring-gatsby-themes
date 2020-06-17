@@ -1,7 +1,32 @@
 import React from 'react';
-
-function Events() {
-  return <div>TODO - build events page</div>;
+import { graphql, useStaticQuery } from 'gatsby';
+import Layout from '../components/Layout';
+import EventList from '../components/EventList';
+//
+function EventsTemplate() {
+  const data = useStaticQuery(graphql`
+    query {
+      allEvent(sort: { fields: startDate, order: ASC }) {
+        nodes {
+          id
+          name
+          startDate
+          endDate
+          location
+          url
+          slug
+        }
+      }
+    }
+  `);
+  // alias for better refer
+  const events = data.allEvent.nodes;
+  //
+  return (
+    <Layout>
+      <EventList events={events} />
+    </Layout>
+  );
 }
 
-export default Events;
+export default EventsTemplate;
