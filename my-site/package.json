@@ -8,5 +8,11 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^2.23.3",
+    "gatsby-theme-events": "*",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

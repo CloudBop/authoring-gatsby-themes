@@ -7,5 +7,15 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.23.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "gatsby": "^2.23.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
