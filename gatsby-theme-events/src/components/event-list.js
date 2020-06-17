@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
-//
-function EventList({ events }) {
+import { Styled } from 'theme-ui';
+
+const EventList = ({ events }) => {
+  // console.log('Styled', Styled);
   return (
     <React.Fragment>
-      <h1>Upcoming Events</h1>
-      <ul>
+      <Styled.h1>Upcoming Events</Styled.h1>
+      <Styled.ul>
         {events.map(event => (
-          <li key={event.id}>
+          <Styled.li key={event.id}>
             <strong>
               <Link to={event.slug}>{event.name}</Link>
             </strong>
@@ -16,13 +18,13 @@ function EventList({ events }) {
               month: 'long',
               day: 'numeric',
               year: 'numeric'
-            })}
-            {`in ${event.location}`}
-          </li>
+            })}{' '}
+            in {event.location}
+          </Styled.li>
         ))}
-      </ul>
+      </Styled.ul>
     </React.Fragment>
   );
-}
+};
 
 export default EventList;

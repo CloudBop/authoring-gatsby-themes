@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import EventPage from '../components/Event';
+import Layout from '../components/layout';
+import EventPage from '../components/event';
 
 // - page query needed for graphql variables
 // - pass into data prop of Event "4bb3bb5e-c4f3-52ba-8ed4-5635fbf5def5"
