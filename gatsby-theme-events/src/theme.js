@@ -1,17 +1,17 @@
 // using systemui
 export const theme = {
-  space: [ 0, 4, 8, 16, 32 ],
+  space: [0, 4, 8, 16, 32],
   fonts: {
     body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'
   },
-  fontSizes: [ 16, 18, 20, 22, 27, 36 ],
+  fontSizes: [16, 18, 20, 22, 27, 36],
   lineHeights: {
     body: 1.45,
     heading: 1.1
   },
   colors: {
-    whie: '#fff',
-    gray: [ '#efefef', '#ddd', '#333', '#111' ],
+    white: '#fff',
+    gray: ['#efefef', '#ddd', '#333', '#111'],
     background: '#fff',
     primary: 'rebeccapurple'
   },

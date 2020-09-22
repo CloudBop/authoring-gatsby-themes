@@ -8,7 +8,16 @@
 
 > Setup and Boilerplate for gatsby themeing with workspaces
 
-> What it says on the tin!
+Useful scripts
+
+- yarn workspaces info
+
+run the site using  script below
+
+- yarn workspace my-site develop
+
+remember to install deps using - yarn workspace workspacename add package
+
 
 > gatsby, themes
 
