@@ -1,4 +1,8 @@
 {
   "private": true,
-  "workspaces": [ "gatsby-theme-events", "my-site" ]
+  "workspaces": [
+    "gatsby-theme-events",
+    "my-site",
+    "not-plugin-gatsby-theme-events"
+  ]
 }

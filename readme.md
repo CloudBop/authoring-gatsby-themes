@@ -8,16 +8,19 @@
 
 > Setup and Boilerplate for gatsby themeing with workspaces
 
-Useful scripts
+Useful commands
 
 - yarn workspaces info
 
-run the site using  script below
+run the site using the events theme as a plugin script below
 
 - yarn workspace my-site develop
 
 remember to install deps using - yarn workspace workspacename add package
 
+Run the theme as a standalone site
+
+- yarn workspace not-plugin-gatsby-theme-events develop
 
 > gatsby, themes
 
