@@ -8,11 +8,17 @@
 
 Setup and Boilerplate for gatsby themeing with workspaces.
 
-gatsby-theme-events utilises a yaml-source plugin. gatsby-node reads and graphqlifies data/events.yaml
+gatsby-theme-events 
+- utilises a yaml-source plugin. 
+- see gatsby-node. parses data/events.yaml into graphql
+- components for List Events + Each Event
 
 my-site utlisies the gatsby-theme-events theme/plugin and this functionality can be overriden witin my-site.
+- see gatsby-config 
+- events folder in my-site/events
 
-not-plugin-gatsby-theme-events is a non-plugin version. IE standalone gatsby site.
+not-plugin-gatsby-theme-events is a non-plugin version. IE standalone gatsby site. This gatsby-node.js is most commented&explained
+
 
 > Useful commands
 - yarn workspaces info
@@ -32,8 +38,11 @@ not-plugin-gatsby-theme-events is a non-plugin version. IE standalone gatsby sit
 > gatsby, themes, plugins
 
 **Extra notes**
+ If you use zsh, the * needs to be quoted, e.g. gatsby-theme-events@"*" or "gatsby-theme-events@*"
 
->  If you use zsh, the * needs to be quoted, e.g. gatsby-theme-events@"*" or "gatsby-theme-events@*"
+ package.json.name for referencing workspace
+
+ Both event plugins have dependencies for running standalone. Could be cleaned up?
 
 **Badges will go here**
 

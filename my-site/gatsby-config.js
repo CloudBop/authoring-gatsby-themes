@@ -3,7 +3,9 @@ module.exports = {
     {
       resolve: 'gatsby-theme-events',
       options: {
-        contentPath: 'events',
+        // the folder to read .yml from
+        contentPath: 'upcoming-events',
+        // the url to create pages for
         basePath: 'events'
       }
     }

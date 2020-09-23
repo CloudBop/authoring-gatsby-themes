@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import EventList from '../components/event-list';
 //
 function EventsTemplate() {
+  // query this
   const data = useStaticQuery(graphql`
     query {
       allEvent(sort: { fields: startDate, order: ASC }) {
