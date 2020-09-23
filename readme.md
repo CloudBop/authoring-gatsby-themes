@@ -6,22 +6,30 @@
 
 # Gatsby Themeing
 
-Setup and Boilerplate for gatsby themeing with workspaces
+Setup and Boilerplate for gatsby themeing with workspaces.
+
+gatsby-theme-events utilises a yaml-source plugin. gatsby-node reads and graphqlifies data/events.yaml
+
+my-site utlisies the gatsby-theme-events theme/plugin and this functionality can be overriden witin my-site.
+
+not-plugin-gatsby-theme-events is a non-plugin. IE standalone gatsby site.
 
 > Useful commands
 - yarn workspaces info
-
-> Run the site using the events theme as a plugin script below
-- yarn workspace my-site develop
 
 > Remember to install deps using 
 - yarn workspace workspacename install
 - yarn workspace workspacename add dep-name
 
+
+> Run the site using the events theme as a plugin script below
+- yarn workspace my-site develop
+
 > Run the theme as a standalone site
 - yarn workspace not-plugin-gatsby-theme-events develop
 
-> gatsby, themes
+
+> gatsby, themes, plugins
 
 **Extra notes**
 
