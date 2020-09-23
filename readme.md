@@ -19,6 +19,7 @@ my-site utlisies the gatsby-theme-events theme/plugin and this functionality can
 
 not-plugin-gatsby-theme-events is a non-plugin version. IE standalone gatsby site. This gatsby-node.js is most commented&explained
 
+Only difference is that the plugin version is exported as a function rather than an object. This enables args to be passed via the gatsby-plugin.js
 
 > Useful commands
 - yarn workspaces info
@@ -26,7 +27,6 @@ not-plugin-gatsby-theme-events is a non-plugin version. IE standalone gatsby sit
 > Remember to install deps using 
 - yarn workspace workspacename install
 - yarn workspace workspacename add dep-name
-
 
 > Run the site using the events theme as a plugin script below
 - yarn workspace my-site develop
@@ -40,9 +40,10 @@ not-plugin-gatsby-theme-events is a non-plugin version. IE standalone gatsby sit
 **Extra notes**
  If you use zsh, the * needs to be quoted, e.g. gatsby-theme-events@"*" or "gatsby-theme-events@*"
 
- package.json.name for referencing workspace
+ package.json.name for referencing workspace, beware the @namespace/ easy to gotcha.
 
- Both event plugins have dependencies for running standalone. Could be cleaned up?
+ Both event plugin/standalone have dependencies for running. peerDeps and devDependencies Could be cleaned up?
+
 
 **Badges will go here**
 

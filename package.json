@@ -1,8 +1,14 @@
 {
+  "//private": "don't upload to npm",
   "private": true,
   "workspaces": [
     "gatsby-theme-events",
     "my-site",
     "not-plugin-gatsby-theme-events"
-  ]
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
+  }
 }
