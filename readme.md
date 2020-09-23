@@ -12,7 +12,7 @@ gatsby-theme-events utilises a yaml-source plugin. gatsby-node reads and graphql
 
 my-site utlisies the gatsby-theme-events theme/plugin and this functionality can be overriden witin my-site.
 
-not-plugin-gatsby-theme-events is a non-plugin. IE standalone gatsby site.
+not-plugin-gatsby-theme-events is a non-plugin version. IE standalone gatsby site.
 
 > Useful commands
 - yarn workspaces info
